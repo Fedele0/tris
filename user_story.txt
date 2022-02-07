@@ -1,0 +1,5 @@
+user journey:
+	quando sua madre sta lavorando gli da il suo tablet per farle fare qualche partita a tris e per farla divertire mentre lei è impegnata
+user storyes:
+	1come irene voglio giocare a tris perche quando mia madre lavora mi annoio
+	2come irene voglio che i colori del gioco siano accesi
