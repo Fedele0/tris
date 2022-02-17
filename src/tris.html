@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .line {
+            background-color: black;
+            height: 2px;
+            width: 50px;
+            border-radius: 1px;
+        }
+
+        .cross {
+            margin-top: 20px;
+        }
+
+        #line-a {
+            transform: rotate(45deg);
+        }
+
+        #line-b {
+            transform: translateY(-100%) rotate(-45deg);
+
+        }
+
+        .circle {
+            border-radius: 50%;
+            border: black 3px solid;
+            background-color: #ff4d6d;
+            width: 40%;
+            height: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div class="giocatori" id="giocatore1"> giocatore X punti=0</div ><div class="giocatori" id="giocatore2"> giocatore O punti=0</div>
+    <div class="grid-container">
+          <div class="grid-item"><span class="circle"></span></div>
+          <div class="grid-item"><span> <div class="cross"> <div class="line" id="line-a"> </div > <div class="line" id="line-b"> </div></div></span></div>
+          <div class="grid-item"><span class="circle"></span></div>
+          <div class="grid-item"><span> <div class="cross"> <div class="line" id="line-a"> </div > <div class="line" id="line-b"> </div></div></span></div>
+          <div class="grid-item"><span><div class="cross"> <div class="line" id="line-a"> </div > <div class="line" id="line-b"> </div></div></span></div>
+          <div class="grid-item"><span class="circle"></span></div>
+          <div class="grid-item"><span class="circle"></span></div>
+          <div class="grid-item"><span> <div class="cross"> <div class="line" id="line-a"> </div > <div class="line" id="line-b"> </div></div></span></div>
+          <div class="grid-item"><span class="circle"></span></div>
+      </div>
+</body>
+</html>
