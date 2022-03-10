@@ -1,4 +1,4 @@
-.body{
+body{
     background-color: #ffb3c1;
 }
 
@@ -34,22 +34,17 @@
     transform: rotate(45deg) translate(-8px, -8px) ;
   }
   .giocatori{
-    display: flex;
-      font-size: 2.2em;
-      margin-left: 30%;
-  }
-  .giocatori_child_X{
-    flex: 1;
-  }
-  .giocatori_child_O{
-      margin-right: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 30px;
+    font-size: 2.5vw;
   }
 
   #grid-container {
     display: grid;
     grid-template-columns: 1fr 12px 1fr 12px 1fr;
     grid-template-rows: 1fr 12px 1fr 12px 1fr;
-    width: 60%;
+    width: 40%;
   /*   background-color: red; */
     margin: 0 auto;
   }
@@ -57,7 +52,19 @@
   .board-item {
     aspect-ratio: 1;
     overflow: hidden;
-    background-color:purple;
+    background-color:#ff4d6d;
+  }
+  .corner-up-right{
+    border-top-right-radius: 6px;
+  }
+  .corner-down-right{
+    border-bottom-right-radius: 6px;
+  }
+  .corner-up-left{
+    border-top-left-radius: 6px;
+  }
+  .corner-down-left{
+    border-bottom-left-radius: 6px;
   }
   
   .gap-item {
@@ -68,21 +75,23 @@
   .gap-top > div {
     background-color: black;
     width: 100%;
-    height: 50%;
+    height: 100%;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
   }
   
   .gap-left > div {
     background-color: black;
-    width: 50%;
+    width: 100%;
     height: 100%;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
   }
   .gap-right > div {
+    position:absolute;
+    right:0;
     background-color: black;
-    width: 50%;
+    width: 100%;
     height: 100%;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
@@ -91,8 +100,11 @@
     position:absolute;
     background-color: black;
     width: 100%;
-    height: 50%;
+    height: 100%;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
     bottom: 0;
+  }
+  .gap-center{
+    background-color: black;
   }
