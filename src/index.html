@@ -9,13 +9,14 @@
     <style>
         .line {
             background-color: black;
-            height: 2px;
-            width: 50px;
+            height: 5px;
+            width: 100%;
             border-radius: 1px;
+            margin: auto;  
         }
 
         .cross {
-            margin-top: 20px;
+            margin-top: 50%;
         }
 
         #line-a {
@@ -29,10 +30,12 @@
 
         .circle {
             border-radius: 50%;
-            border: black 3px solid;
+            border: black 6px solid;
             background-color: #ff4d6d;
-            width: 40%;
-            height: 40%;
+            width: 80%;
+            height: 80%;
+            margin: auto;
+            transform: translateY(12%);
         }
     </style>
 </head>
@@ -43,60 +46,73 @@
         <div class="bar3"></div>
     </div>
     <div class="giocatori">
-        <div class="giocatori_child_O" id="giocatore1"> giocatore X punti=0</div >
-        <div class="giocatori_child_O" id="giocatore2"> giocatore O punti=0</div>
+        <div></div>
+        <div  id="giocatore1"> giocatore X punti=0</div >
+        <div  id="giocatore2"> giocatore O punti=0</div>
+        <div></div>
     </div>
     <div id="grid-container">
         <!-- Prima riga -->
-        <div class="grid-item board-item"></div>
+        <div class="grid-item board-item corner-up-left" onclick="play(0,0)"></div>
         <div class="grid-item gap-item gap-top">
           <div></div>
         </div>
-        <div class="grid-item board-item"></div>
-        <div class="grid-item gap-item gap-top"><div></div></div>
-        <div class="grid-item board-item"></div>
-      
-        <!-- Seconda riga (gap)-->
-        <div class="grid-item gap-item gap-left">
-            <div></div>
+        <div class="grid-item board-item " onclick="play(0,1)">
+            <div class="circle"></div>
         </div>
-        <div class="grid-item gap-item"></div>
-        <div class="grid-item gap-item"></div>
-        <div class="grid-item gap-item"></div>
+        <div class="grid-item gap-item gap-top"><div></div></div>
+        <div class="grid-item board-item corner-up-left" onclick="play(0,2)">
+            <div class="circle"></div>
+        </div>
+          <!-- Seconda riga (gap)-->
+        <div class="grid-item gap-item gap-left"><div></div></div>
+        <div class="grid-item gap-item gap-center"></div>
+        <div class="grid-item gap-item gap-center"></div>
+        <div class="grid-item gap-item gap-center"></div>
         <div class="grid-item gap-item gap-right">
             <div></div>
         </div>
       
         <!-- Terza riga -->
-        <div class="grid-item board-item"></div>
-        <div class="grid-item gap-item"></div>
-        <div class="grid-item board-item"></div>
-        <div class="grid-item gap-item"></div>
-        <div class="grid-item board-item"></div>
+        <div class="grid-item board-item" onclick="play(1,0)"></div>
+        <div class="grid-item gap-item gap-center"></div>
+        <div class="grid-item board-item" onclick="play(1,1)">
+            <div class="cross">
+                <div class="line" id="line-a"></div>
+                <div class="line" id="line-b"></div>
+            </div>
+        </div>
+        <div class="grid-item gap-item gap-center"></div>
+        <div class="grid-item board-item" onclick="play(1,2)"></div>
       
         <!-- Quarta riga (gap) -->
         <div class="grid-item gap-item gap-left">
             <div></div>
         </div>
-        <div class="grid-item gap-item"></div>
-        <div class="grid-item gap-item"></div>
-        <div class="grid-item gap-item"></div>
+        <div class="grid-item gap-item gap-center"></div>
+        <div class="grid-item gap-item gap-center"></div>
+        <div class="grid-item gap-item gap-center"></div>
         <div class="grid-item gap-item gap-right">
             <div></div>
         </div>
       
         <!-- Quinta riga -->
-        <div class="grid-item board-item"></div>
+        <div class="grid-item board-item corner-down-left" onclick="play(2,0)"></div>
         <div class="grid-item gap-item gap-bottom">
             <div></div>
         </div>
-        <div class="grid-item board-item"></div>
+        <div class="grid-item board-item" onclick="play(2,1)">
+            <div class="cross">
+                <div class="line" id="line-a"></div>
+                <div class="line" id="line-b"></div>
+            </div>
+        </div>
         <div class="grid-item gap-item gap-bottom">
             <div></div>
         </div>
-        <div class="grid-item board-item"></div>
+        <div class="grid-item board-item corner-down-right" onclick="play(2,2)"></div>
       
-      </div>
-      <script src="myscript.js"></script>
+    </div>
+    <script src="myscript.js"></script>
 </body>
 </html>
